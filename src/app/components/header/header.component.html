@@ -1,1 +1,20 @@
-<p>header works!</p>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a routerLink="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <i-bs name="bootstrap-fill"
+          width="40"
+          height="32">
+    </i-bs>
+    <span class="fs-4">ToDo App</span>
+  </a>
+  <ul ngbNav [(activeId)]="active" class="nav nav-pills">
+    <li [ngbNavItem]="1" class="nav-item">
+      <a ngbNavLink routerLink="/home" class="nav-link">Home</a>
+    </li>
+    <li [ngbNavItem]="2" class="nav-item">
+      <a ngbNavLink routerLink="/notes" class="nav-link">Notes</a>
+    </li>
+    <li [ngbNavItem]="3" class="nav-item">
+      <a ngbNavLink routerLink="/about" class="nav-link">About</a>
+    </li>    
+  </ul>
+</header>
